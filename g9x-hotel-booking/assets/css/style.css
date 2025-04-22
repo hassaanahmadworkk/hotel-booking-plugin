@@ -1,0 +1,9 @@
+/*
+ * Main Stylesheet (Deprecated)
+ *
+ * Admin styles moved to admin-style.css
+ * Frontend styles moved to frontend-style.css
+ * This file is kept for backward compatibility if directly referenced,
+ * but new enqueues should use the specific files.
+ * It can be safely removed if no legacy references exist.
+ */

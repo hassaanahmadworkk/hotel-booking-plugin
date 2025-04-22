@@ -1,0 +1,495 @@
+/* G9X Hotel Booking - Frontend Styles */
+
+/* General Notice Styles */
+.g9x-notice {
+    padding: 15px 20px;
+    margin: 20px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.g9x-error, .g9x-no-results {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.g9x-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.g9x-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+
+/* Search Form Styling */
+.g9x-search-form { /* Renamed from .g9x-hotel-booking-form for clarity */
+    max-width: 900px; /* Wider form */
+    margin: 30px auto; /* More margin */
+    padding: 30px;
+    background-color: #f9f9f9; /* Lighter background */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.g9x-search-form h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.g9x-search-form .search-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Use gap for spacing */
+    margin-bottom: 20px;
+}
+
+.g9x-search-form .search-field {
+    flex: 1 1 200px; /* Allow wrapping, base width 200px */
+    min-width: 150px; /* Minimum width before wrapping */
+}
+
+.g9x-search-form .search-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.g9x-search-form .search-field input[type="date"],
+.g9x-search-form .search-field input[type="number"],
+.g9x-search-form .search-field select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.g9x-search-form .search-field input:focus,
+.g9x-search-form .search-field select:focus {
+    border-color: #007cba; /* WP blue */
+    box-shadow: 0 0 0 1px #007cba;
+    outline: 2px solid transparent;
+}
+
+.g9x-search-form .search-field select {
+    /* Basic appearance reset */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add custom arrow */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 10px auto;
+    padding-right: 30px; /* Make space for arrow */
+}
+
+.g9x-search-form .search-button {
+    display: flex;
+    align-items: flex-end; /* Align button to bottom */
+    flex-basis: 100%; /* Full width on small screens */
+}
+@media (min-width: 768px) {
+    .g9x-search-form .search-button {
+        flex-basis: auto; /* Auto width on larger screens */
+    }
+}
+
+.g9x-search-form .search-button button {
+    padding: 12px 25px;
+    background: #007cba; /* WP blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1em;
+    width: 100%; /* Full width within its flex item */
+    transition: background-color 0.2s ease;
+}
+
+.g9x-search-form .search-button button:hover {
+    background: #005a87; /* Darker WP blue */
+}
+
+/* Search Results Styling */
+.g9x-search-results {
+    margin-top: 30px;
+    padding: 0; /* Remove padding if results have own padding */
+}
+
+.g9x-search-results h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.g9x-room-result {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease;
+}
+
+.g9x-room-result:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.g9x-room-image {
+    flex: 1 1 200px; /* Grow, shrink, base width 200px */
+    min-height: 180px; /* Minimum height */
+    background-color: #f0f0f0; /* Placeholder background */
+}
+
+.g9x-room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area */
+    display: block;
+}
+
+.g9x-no-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #888;
+    font-size: 0.9em;
+}
+
+.g9x-room-details {
+    flex: 2 1 300px; /* Grow more, base width 300px */
+    padding: 20px;
+}
+
+.g9x-room-booking {
+    flex: 1 1 180px; /* Base width 180px */
+    padding: 20px;
+    background: #f9f9f9;
+    border-left: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .g9x-room-booking {
+        border-left: none;
+        border-top: 1px solid #e0e0e0;
+    }
+}
+
+
+.g9x-room-details h3 {
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+.g9x-room-type {
+    margin-bottom: 10px;
+}
+
+.g9x-room-type span {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 0.2em 0.5em;
+    border-radius: 3px;
+    font-size: 0.85em;
+    display: inline-block;
+}
+
+.g9x-room-specs {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.g9x-room-specs span {
+    display: block; /* Each spec on new line */
+    margin-bottom: 5px;
+}
+.g9x-room-specs span strong {
+    color: #333;
+    min-width: 80px; /* Align labels */
+    display: inline-block;
+}
+.g9x-room-address {
+    font-style: italic;
+}
+
+.g9x-room-amenities {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #666;
+}
+.g9x-room-amenities strong {
+    color: #444;
+}
+
+.g9x-room-description {
+    margin-bottom: 0; /* Remove bottom margin if last element */
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.g9x-room-price {
+    margin-bottom: 15px;
+}
+
+.g9x-room-price .price-amount {
+    display: block;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #007cba; /* WP blue */
+    line-height: 1.2;
+}
+
+.g9x-room-price .price-period {
+    display: block;
+    font-size: 0.85em;
+    color: #666;
+}
+
+.g9x-total-price {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.g9x-book-now-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007cba; /* WP blue */
+    color: white !important; /* Override theme link colors */
+    text-decoration: none !important;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center;
+}
+
+.g9x-book-now-button:hover {
+    background-color: #005a87; /* Darker WP blue */
+    color: white !important;
+}
+
+/* Booking Popup Styling */
+.g9x-popup {
+    display: none; /* Controlled by JS */
+    position: fixed;
+    z-index: 10000; /* High z-index */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.g9x-popup-content {
+    background-color: #fff;
+    margin: 5% auto; /* More space from top */
+    padding: 30px;
+    border-radius: 6px;
+    width: 90%;
+    max-width: 550px; /* Slightly narrower */
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: g9x-popup-fadein 0.3s ease-out;
+}
+
+@keyframes g9x-popup-fadein {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.g9x-close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.g9x-close-popup:hover {
+    color: #333;
+}
+
+.g9x-popup-content h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+.g9x-popup-content h4 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #444;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 5px;
+}
+
+
+.g9x-booking-summary {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    font-size: 0.95em;
+    color: #444;
+}
+
+.g9x-booking-summary div {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+.g9x-booking-summary div:last-child {
+    margin-bottom: 0;
+}
+
+.g9x-form-field {
+    margin-bottom: 15px;
+}
+
+.g9x-form-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.g9x-form-field input[type="text"],
+.g9x-form-field input[type="email"],
+.g9x-form-field input[type="tel"],
+.g9x-form-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+.g9x-form-field textarea {
+    min-height: 80px;
+}
+
+.g9x-form-field input:focus,
+.g9x-form-field textarea:focus {
+     border-color: #007cba;
+     box-shadow: 0 0 0 1px #007cba;
+     outline: 2px solid transparent;
+}
+
+.g9x-form-actions {
+    margin-top: 25px;
+    position: relative; /* For spinner positioning */
+}
+
+.g9x-confirm-booking {
+    padding: 12px 25px;
+    background: #28a745; /* Green confirmation */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1em;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.g9x-confirm-booking:hover {
+    background: #218838; /* Darker green */
+}
+
+/* AJAX Spinner */
+.g9x-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #007cba; /* WP blue */
+    animation: g9x-spin 1s ease-in-out infinite;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -10px; /* Half of height */
+}
+
+@keyframes g9x-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .g9x-search-form .search-row {
+        gap: 15px; /* Smaller gap */
+    }
+    .g9x-room-result {
+        flex-direction: column;
+    }
+    .g9x-room-image {
+        min-height: 150px; /* Adjust height */
+    }
+    .g9x-room-details, .g9x-room-booking {
+        flex-basis: auto; /* Reset flex basis */
+        width: 100%;
+    }
+    .g9x-popup-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .g9x-search-form .search-field {
+        flex-basis: 100%; /* Full width */
+        min-width: unset;
+    }
+     .g9x-popup-content {
+        margin: 5% auto;
+    }
+}

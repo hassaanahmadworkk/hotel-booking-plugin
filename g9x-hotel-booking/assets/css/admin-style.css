@@ -1,0 +1,156 @@
+/* G9X Hotel Booking - Admin Area Styles */
+
+/* Metabox General Styling */
+.g9x-hotel-booking-metabox {
+    margin-bottom: 20px;
+    padding: 20px; /* Adjusted padding */
+    border: 1px solid #ccd0d4; /* WP Admin border color */
+    background-color: #fff; /* WP Admin background */
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.g9x-hotel-booking-metabox h3 {
+    font-size: 1.1em; /* Slightly larger heading */
+    margin: -20px -20px 20px -20px; /* Extend to edges */
+    padding: 15px 20px;
+    border-bottom: 1px solid #ccd0d4;
+    background-color: #f6f7f7; /* Light header background */
+}
+
+.g9x-hotel-booking-metabox p {
+    margin-bottom: 15px;
+    padding: 0; /* Remove default paragraph padding if any */
+}
+
+.g9x-hotel-booking-metabox label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600; /* WP standard bold */
+    color: #2c3338; /* WP text color */
+    font-size: 13px; /* WP standard font size */
+    line-height: 1.4;
+}
+
+.g9x-hotel-booking-metabox input[type="text"],
+.g9x-hotel-booking-metabox input[type="number"],
+.g9x-hotel-booking-metabox input[type="email"],
+.g9x-hotel-booking-metabox input[type="date"],
+.g9x-hotel-booking-metabox input[type="password"], /* Note: Password field itself is deprecated */
+.g9x-hotel-booking-metabox textarea,
+.g9x-hotel-booking-metabox select {
+    width: 100%;
+    max-width: 450px; /* Limit max width */
+    padding: 8px 10px; /* WP standard padding */
+    margin: 0; /* Remove default margins */
+    border: 1px solid #8c8f94; /* WP input border */
+    box-sizing: border-box;
+    border-radius: 3px; /* WP standard radius */
+    font-size: 14px; /* WP standard input font size */
+    color: #2c3338;
+    background-color: #fff;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+    transition: border-color 0.1s ease-in-out;
+}
+
+.g9x-hotel-booking-metabox input[type="text"]:focus,
+.g9x-hotel-booking-metabox input[type="number"]:focus,
+.g9x-hotel-booking-metabox input[type="email"]:focus,
+.g9x-hotel-booking-metabox input[type="date"]:focus,
+.g9x-hotel-booking-metabox input[type="password"]:focus,
+.g9x-hotel-booking-metabox textarea:focus,
+.g9x-hotel-booking-metabox select:focus {
+    border-color: #007cba; /* WP focus color */
+    box-shadow: 0 0 0 1px #007cba;
+    outline: 2px solid transparent;
+}
+
+.g9x-hotel-booking-metabox textarea {
+    min-height: 100px; /* Use min-height */
+    line-height: 1.5;
+}
+
+.g9x-hotel-booking-metabox select {
+    /* Use default WP select styling where possible */
+}
+
+.g9x-hotel-booking-metabox small {
+    display: block;
+    color: #646970; /* WP help text color */
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.g9x-hotel-booking-metabox .readonly-field {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+    border-color: #ddd;
+    box-shadow: none;
+}
+
+/* Room Gallery Specific Styling */
+.g9x_room_gallery_preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Use gap for spacing */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f6f7f7;
+    border: 1px dashed #ccd0d4;
+    border-radius: 3px;
+    min-height: 50px; /* Indicate drop zone */
+}
+
+.g9x_room_gallery_image {
+    position: relative;
+    border: 1px solid #ccd0d4;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.g9x_room_gallery_image img {
+    display: block;
+    width: 80px; /* Fixed size for consistency */
+    height: 80px;
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+.g9x_remove_image {
+    position: absolute;
+    top: -8px; /* Adjust position */
+    right: -8px;
+    background-color: #d63638; /* WP error color */
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px; /* Adjust line-height */
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #fff; /* Add border for visibility */
+    box-shadow: 0 0 2px rgba(0,0,0,.5);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.g9x_remove_image:hover {
+    background-color: #b32d2e;
+}
+
+/* Media Uploader Button - Use WP Button styles */
+#g9x_room_gallery_button {
+    /* Inherit WP button styles where possible */
+    /* Example: Add class="button button-secondary" in PHP */
+    margin-top: 5px; /* Add some space */
+}
+
+/* Deprecated Customer Metabox Notice */
+.g9x-hotel-booking-metabox.notice.notice-warning {
+    border-left-color: #dba617; /* WP warning color */
+    padding: 10px 15px;
+    margin-top: 15px;
+}
